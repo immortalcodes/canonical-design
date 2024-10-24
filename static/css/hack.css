@@ -68,6 +68,12 @@
     height: 100%;
 }
 
+#ds_hero1 {
+    width:100%;
+    bottom:0;
+    position:absolute;
+}
+
 /* mobile hacks */
 @media (max-width: 1210px) {
     
@@ -95,5 +101,11 @@
     /* inset dd */
     .p-navigation__item--dropdown-toggle .p-navigation__dropdown {
         padding-left: 3.1rem;
+    }
+}
+
+@media (max-width: 619px) {
+    #ds_hero1 {
+        display:none;
     }
 }
