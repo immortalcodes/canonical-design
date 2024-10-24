@@ -1,5 +1,7 @@
-# Use the official Nginx image from the Docker Hub
-FROM nginx:alpine
+FROM ubuntu:noble
+
+# Install nginx
+RUN apt update && apt install nginx -y
 
 # Create healthcheck endpoint
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
