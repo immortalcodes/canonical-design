@@ -39,8 +39,8 @@ docReady(function() {
             let mail = 'mailto:' + contact_email + '?subject=Hello Open Design Working Group&body=';
             
             mail += 'First%20name%3A%20' + encodeURIComponent(document.getElementById('sauce_firstName').value) + '%0D%0A';
-            mail += 'Last%20name:%3A%20' + encodeURIComponent(document.getElementById('sauce_lastName').value) + '%0D%0A%0D%0A';
-            mail += 'Comments:%3A%20' + encodeURIComponent(document.getElementById('sauce_comments').value) + '%0D%0A';
+            mail += 'Last%20name%3A%20' + encodeURIComponent(document.getElementById('sauce_lastName').value) + '%0D%0A%0D%0A';
+            mail += 'Comments%3A%20' + encodeURIComponent(document.getElementById('sauce_comments').value) + '%0D%0A';
             
             console.log(mail);
             sauce_submit.setAttribute('href', mail);
