@@ -7,7 +7,8 @@
 
     <title>
 
-      {% block meta_title %}{% endblock meta_title %}
+      {% block meta_title %}
+      {% endblock meta_title %}
       | Canonical design
     </title>
 
@@ -76,15 +77,17 @@
         <meta name="author" content="Canonical" />
 
         <link rel="stylesheet"
-              type="text/css"
-              media="screen"
-              href="/static/css/styles.css" />
+        type="text/css"
+        media="screen"
+        href="{{ url_for('static', filename='css/styles.css') }}" />
+  
       </head>
-      <body>
+      <body class=" 
+        {% block body_class %}{% endblock %} l-site">
 
         <a href="#main-content" class="p-link--skip">Jump to main content</a>
 
-        {% include '_navigation.html' %}
+        {% include '_layouts/_navigation.html' %}
 
         <div class="wrapper">
           <div id="main-content">
@@ -93,8 +96,8 @@
 
           </div>
         </div>
-        
-        {% include '_footer.html' %}
+
+        {% include '_layouts/_footer.html' %}
 
       </body>
     </html>
