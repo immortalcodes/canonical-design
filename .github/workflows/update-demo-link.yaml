@@ -15,7 +15,7 @@ jobs:
         id: extract_link
         run: |
           COMMENT_BODY="${{ github.event.comment.body }}"
-          if [[ "$COMMENT_BODY" =~ (https://\S+\.demos\.haus) ]]; then
+          if [[ "$COMMENT_BODY" =~ \([^\)]*https://\S+\.demos\.haus[^\)]*\) ]]; then
             echo "DEMO_LINK=${BASH_REMATCH[1]}" >> $GITHUB_ENV
           else
             echo "No matching demo link found. Exiting."
